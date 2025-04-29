@@ -74,22 +74,22 @@ The primary dataset `brazil_election2018.xlsx` was assembled from publicly avail
 | Variable | Source | Description |
 |:---|:---|:---|
 | Acronym | - | State abbreviation |
-| Code | - | Municipality code |
-| Municipality | - | Municipality name |
-| WVF | - | Blank votes, first round |
-| WVS | - | Blank votes, second round |
-| NVF | - | Null votes, first round |
-| NVS | - | Null votes, second round |
-| VVF | - | Valid votes, first round |
-| VVS | - | Valid votes, second round |
+| Code | IBGE_SIDRA | Municipality code |
+| Municipality | IBGE_SIDRA | Municipality name |
+| WVF | IPEADATA | Blank votes, first round |
+| WVS | IPEADATA | Blank votes, second round |
+| NVF | IPEADATA | Null votes, first round |
+| NVS | IPEADATA | Null votes, second round |
+| VVF | IPEADATA | Valid votes, first round |
+| VVS | IPEADATA | Valid votes, second round |
 | MHDI_I | ATLAS | Municipal Human Development Index (Income) |
 | MHDI_H | ATLAS | Municipal Human Development Index (Health) |
 | MHDI_E | ATLAS | Municipal Human Development Index (Education) |
 | Capital | - | Indicator whether the municipality is a state capital |
 | Region | - | Brazilian region (North, Northeast, Central-West, Southeast, South) |
 | DD | IBGE_SIDRA | Population density |
-| PBNVF | IPEADATA | Proportion of blank and null votes (first round) |
-| PBNVS | IPEADATA | Proportion of blank and null votes (second round - dependent variable) |
+| PBNVF | - | Proportion of blank and null votes (first round) |
+| PBNVS | - | Proportion of blank and null votes (second round - dependent variable) |
 
 ## 📈 Figures and Diagnostics
 
