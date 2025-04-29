@@ -1,5 +1,9 @@
 # Determinants of Blank and Null Votes in the Brazilian Presidential Elections
 
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
+Statistical modeling of blank and null votes in the 2018 Brazilian presidential election using GAMLSS unit regression models.
+
 This repository contains the codes, data, and figures associated with the research project **"Determinants of Blank and Null Votes in the Brazilian Presidential Elections"**, submitted for publication in 2025. The study analyzes the socioeconomic and regional factors influencing the proportion of blank and null votes across Brazilian municipalities in the 2018 presidential election, using unit regression models within the GAMLSS framework.
 
 ## 📂 Project Structure
@@ -58,7 +62,7 @@ sec-project/
    - `RUBXII_reg.R`
    - `UW_reg.R`
 
-> **Note:** Although random effects were explored, some distributions (e.g., UW , KW and RUBXII) lack established bibliography for mixed-effects modeling, thus random effects were not fully included for all distributions.
+> **Note:** Although random effects were explored, some distributions (e.g., Unit Weibull, Kumaraswamy, and RUBXII) lack established bibliography for mixed-effects modeling, thus random effects were not fully included for all distributions.
 
 ## 📄 Data Description
 
@@ -101,7 +105,24 @@ Visualizations and model diagnostics are available in the `figures/` folder:
 
 ## 📚 Citation
 
-If you use this material, please consider citing our work.
+Guerra, R. R.; Moraes, K. S.; Junior, F. J. M.; Peña-Ramírez, F. A.; Pereira, R. N. (2025).  
+**Determinants of Blank and Null Votes in the Brazilian Presidential Elections.**  
+Manuscript submitted for publication. Preprint available upon request.
+
+If you use this material, please cite our work.
+
+## 🙏 Acknowledgments
+
+This project was supported by the São Paulo Research Foundation (FAPESP) through the program  
+**"ABC - Brazilian Academy of Sciences / EVC - Scientific Vocations Stimulus Scholarship (2024/2025)"**,  
+under the call for proposals [FAPESP Vocations 2024](https://fapesp.br/vocacoes2024).
+
+Grant Number: **2024/18409-7**.
+
+We gratefully acknowledge FAPESP for their financial support and encouragement of scientific research.
+
+Special thanks to **Professor Renata Rojas Guerra** and **Professor Fernando Arturo Peña-Ramírez**  
+for their valuable guidance, encouragement, and insightful discussions throughout the development of this project.
 
 ## 📬 Contact
 
