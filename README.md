@@ -94,7 +94,7 @@ Visualizations and model diagnostics are available in the `figures/` folder:
 
 This project uses extended unit distributions from:
 
-* **[UnitDistsForGAMLSS](https://github.com/renata-rojasg/UnitDistsForGAMLSS)**
+* **[UnitDistsForGAMLSS](https://github.com/renata-rojasg/UnitDistForGAMLSS)**
 
 Please cite this repository if you reuse the code:
 
