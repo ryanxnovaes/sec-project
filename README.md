@@ -4,18 +4,14 @@
 
 Statistical modeling of blank and null votes in the 2018 Brazilian presidential election using GAMLSS unit regression models.
 
-This repository contains the codes, data, and figures associated with the research project **"Determinants of Blank and Null Votes in the Brazilian Presidential Elections"**, submitted for publication in 2025. The study analyzes the socioeconomic and regional factors influencing the proportion of blank and null votes across Brazilian municipalities in the 2018 presidential election, using unit regression models within the GAMLSS framework.
+This repository contains the codes, data, and figures associated with the research project **"Determinants of Blank and Null Votes in the Brazilian Presidential Elections"**, published in Stats (ISSN 2571-905X) and submitted in 2025. The study analyzes the socioeconomic and regional factors influencing the proportion of blank and null votes across Brazilian municipalities in the 2018 presidential election, using unit regression models within the GAMLSS framework.
 
 ## 📂 Project Structure
 
 ```
 sec-project/
 ├── codes/
-│   ├── KUMA_reg.R
-│   ├── RUBXII_reg.R
-│   ├── UW_reg.R
 │   ├── modeling-project.R
-│   ├── random-effects-modeling.R
 │   └── sec-proj.Rproj
 │
 ├── data/
@@ -41,7 +37,6 @@ sec-project/
   - Kumaraswamy (Kuma)
   - Unit Weibull (UW)
   - Reflected Unit Burr XII (RUBXII)
-- **Data:** Proportions of blank and null votes, disaggregated Municipal Human Development Index (MHDI) dimensions (income, health, education), demographic density, capital indicator, and region.
 - **Main Result:** The beta regression model with varying dispersion (non-constant sigma) showed the best overall performance according to AIC, BIC, R², and forecast error metrics.
 
 ## 🛠️ How to Reproduce
@@ -55,14 +50,11 @@ sec-project/
 
 3. Run the scripts in the following order:
    - `modeling-project.R` (Fixed-effects modeling)
-   - `random-effects-modeling.R` (Random-effects modeling)
 
 4. Make sure to load the custom distributions by sourcing:
    - `KUMA_reg.R`
    - `RUBXII_reg.R`
    - `UW_reg.R`
-
-> **Note:** Although random effects were explored, some distributions (e.g., Unit Weibull, Kumaraswamy, and RUBXII) lack established bibliography for mixed-effects modeling, thus random effects were not fully included for all distributions.
 
 ## 📄 Data Description
 
@@ -75,25 +67,20 @@ The primary dataset `brazil_election2018.xlsx` was assembled from publicly avail
 
 ### Main Variables
 
-| Variable | Source | Description |
-|:---|:---|:---|
-| Acronym | - | State abbreviation |
-| Code | IBGE_SIDRA | Municipality code |
-| Municipality | IBGE_SIDRA | Municipality name |
-| WVF | IPEADATA | Blank votes, first round |
-| WVS | IPEADATA | Blank votes, second round |
-| NVF | IPEADATA | Null votes, first round |
-| NVS | IPEADATA | Null votes, second round |
-| VVF | IPEADATA | Valid votes, first round |
-| VVS | IPEADATA | Valid votes, second round |
-| MHDI_I | ATLAS | Municipal Human Development Index (Income) |
-| MHDI_H | ATLAS | Municipal Human Development Index (Health) |
-| MHDI_E | ATLAS | Municipal Human Development Index (Education) |
-| Capital | - | Indicator whether the municipality is a state capital |
-| Region | - | Brazilian region (North, Northeast, Central-West, Southeast, South) |
-| DD | IBGE_SIDRA | Population density |
-| PBNVF | - | Proportion of blank and null votes (first round) |
-| PBNVS | - | Proportion of blank and null votes (second round - dependent variable) |
+| Variable                  | Source   | Description                                    |
+| ------------------------- | -------- | ---------------------------------------------- |
+| Acronym                   | -        | State abbreviation                             |
+| Code                      | IBGE     | Municipality code                              |
+| Municipality              | IBGE     | Municipality name                              |
+| WVF, WVS                  | IPEADATA | Blank votes (1st/2nd rounds)                   |
+| NVF, NVS                  | IPEADATA | Null votes (1st/2nd rounds)                    |
+| VVF, VVS                  | IPEADATA | Valid votes (1st/2nd rounds)                   |
+| MHDI\_I, MHDI\_H, MHDI\_E | ATLAS    | MHDI by Income, Health, and Education          |
+| Capital                   | -        | Indicator of state capital                     |
+| Region                    | -        | Region (North, Northeast, etc.)                |
+| DD                        | IBGE     | Population density                             |
+| PBNVF                     | -        | Prop. of blank/null votes (1st round)          |
+| PBNVS                     | -        | Prop. of blank/null votes (2nd round - target) |
 
 ## 📈 Figures and Diagnostics
 
@@ -103,26 +90,41 @@ Visualizations and model diagnostics are available in the `figures/` folder:
 - **residuals.pdf:** Histogram and QQ-plot of residuals for the final model
 - **wormplots_1.pdf** and **wormplots_2.pdf:** Partial effects of covariates on dispersion parameter
 
+## 🔧 Custom Distributions
+
+This project uses extended unit distributions from:
+
+* **[UnitDistsForGAMLSS](https://github.com/renata-rojasg/UnitDistsForGAMLSS)**
+
+Please cite this repository if you reuse the code:
+
+```bibtex
+@misc{Guerra2025,
+  author = {Guerra, Renata Rojas},
+  title = {UnitDistForGAMLSS},
+  year = {2025},
+  note = {Available online: \url{https://github.com/renata-rojasg/UnitDistForGAMLSS}, DOI: \href{https://doi.org/10.6084/m9.figshare.25328575.v2}{10.6084/m9.figshare.25328575.v2}}
+}
+```
 ## 📚 Citation
 
-Guerra, R. R.; Moraes, K. S.; Junior, F. J. M.; Peña-Ramírez, F. A.; Pereira, R. N. (2025).  
-**Determinants of Blank and Null Votes in the Brazilian Presidential Elections.**  
-Manuscript submitted for publication. Preprint available upon request.
+If you use this material, please cite:
 
-If you use this material, please cite our work.
-
+```bibtex
+@article{guerra2025determinants,
+  title={Determinants of Blank and Null Votes in the Brazilian Presidential Elections},
+  author={Guerra, Renata Rojas and Moraes, Kerolene S. and Moreira Junior, Fernando J. and Pe\~na-Ram\'irez, Fernando A. and Pereira, Ryan N.},
+  journal={Stats},
+  year={2025}
+}
+```
 ## 🙏 Acknowledgments
 
-This project was supported by the São Paulo Research Foundation (FAPESP) through the program  
-**"ABC - Brazilian Academy of Sciences / EVC - Scientific Vocations Stimulus Scholarship (2024/2025)"**,  
-under the call for proposals [FAPESP Vocations 2024](https://fapesp.br/vocacoes2024).
+This work was supported by **FAPESP** (Grant No. **2024/18409-7**) through the program:
 
-Grant Number: **2024/18409-7**.
+> *ABC - Brazilian Academy of Sciences / [EVC](https://fapesp.br/vocacoes2024) - Scientific Vocations Stimulus Scholarship0 (2024/2025)*
 
-We gratefully acknowledge FAPESP for their financial support and encouragement of scientific research.
-
-Special thanks to **Professor Renata Rojas Guerra** and **Professor Fernando Arturo Peña-Ramírez**  
-for their valuable guidance, encouragement, and insightful discussions throughout the development of this project.
+We thank **Prof. Renata Rojas Guerra** and **Prof. Fernando A. Peña-Ramírez** for their valuable support.
 
 ## 📬 Contact
 
