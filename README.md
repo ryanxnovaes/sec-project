@@ -63,8 +63,6 @@ The primary dataset `brazil_election2018.xlsx` was assembled from publicly avail
 - **Brazilian Institute of Geography and Statistics (IBGE)** (demographic data)
 - **IPEADATA** (election-related statistics)
 
-> The file `votesBrazil_2018.xlsx` was not used in the final analysis.
-
 ### Main Variables
 
 | Variable                  | Source   | Description                                    |
