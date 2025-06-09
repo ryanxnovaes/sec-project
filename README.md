@@ -52,7 +52,7 @@ sec-project/
    - `modeling-project.R` (Fixed-effects modeling)
 
 4. Make sure to load the custom distributions by sourcing:
-   - `KUMA_reg.R`
+   - `KW_reg.R`
    - `RUBXII_reg.R`
    - `UW_reg.R`
 
@@ -111,16 +111,24 @@ If you use this material, please cite:
 ```bibtex
 @article{guerra2025determinants,
   title={Determinants of Blank and Null Votes in the Brazilian Presidential Elections},
-  author={Guerra, Renata Rojas and Moraes, Kerolene S. and Moreira Junior, Fernando J. and Pe\~na-Ram\'irez, Fernando A. and Pereira, Ryan N.},
+  author={Guerra, Renata Rojas and Moraes, Kerolene S. and Moreira Junior, Fernando J. and Pe\~na-Ram\'irez, Fernando A. and Pereira, Ryan Novaes},
   journal={Stats},
-  year={2025}
+  year = {2025},
+  volume = {8},
+  number = {2},
+  pages = {38},
+  doi = {10.3390/stats8020038}
 }
 ```
+
+📄 [Published article (DOI)](https://doi.org/10.3390/stats8020038)
 ## 🙏 Acknowledgments
 
 This work was supported by **FAPESP** (Grant No. **2024/18409-7**) through the program:
 
 > *ABC - Brazilian Academy of Sciences / [EVC](https://fapesp.br/vocacoes2024) - Scientific Vocations Stimulus Scholarship0 (2024/2025)*
+
+We also acknowledge support from the Instituto Serrapilheira, which fosters scientific research and encourages young researchers in Brazil.
 
 We thank **Prof. Renata Rojas Guerra** and **Prof. Fernando A. Peña-Ramírez** for their valuable support.
 
