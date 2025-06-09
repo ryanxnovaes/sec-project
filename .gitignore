@@ -2,3 +2,8 @@
 .Rhistory
 .RData
 .Ruserdata
+
+codes/sec-proj/random-effects-modeling.R
+codes/sec-proj/UW_reg.R
+codes/sec-proj/RUBXII_reg.R
+codes/sec-proj/KUMA_reg.R
