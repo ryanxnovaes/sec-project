@@ -192,7 +192,7 @@ simplex_fixed <- gamlss(PBNVS ~., sigma.formula = ~., family = SIMPLEX(), data =
 # --- Kumaraswamy Distribution ---
 kuma_fixed <- gamlss(
   PBNVS ~., sigma.formula = ~ PBNVF + MHDI_I + MHDI_H + MHDI_E + DD + North + Northeast + South + Southeast,
-  family = Kuma(mu.link = "logit", sigma.link = "log"), data = datafix)
+  family = KW(mu.link = "logit", sigma.link = "log"), data = datafix)
 
 # --- Unit Weibull Distribution ---
 uw_fixed <- gamlss(
